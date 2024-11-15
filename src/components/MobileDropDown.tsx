@@ -16,9 +16,12 @@ const MobileDropDown = ({ setMobileDropDown, mobileDropDown }: { setMobileDropDo
     const toggleDropdown = () => {
         setMobileDropDown(!mobileDropDown);
     };
+    const handleClickInside = (event: React.MouseEvent) => {
+        event.stopPropagation();
+    };
 
     return (
-        <div className="relative">
+        <div className="relative" onClick={handleClickInside}>
             {
                 mobileDropDown &&
                 <>
@@ -42,7 +45,7 @@ const MobileDropDown = ({ setMobileDropDown, mobileDropDown }: { setMobileDropDo
                             </div>
 
                             <div className='w-full h-[124px] flex flex-col gap-[16px]'>
-                                <button className='w-full h-[19px]'>
+                                <button className='w-full h-[19px]' onClick={toggleDropdown}>
                                     <Link href='/login' className='w-full h-full flex items-center gap-[11px]'><FaRegUser />Profile</Link>
                                 </button>
                                 <button className='w-full h-[19px] flex items-center gap-[11px]'>

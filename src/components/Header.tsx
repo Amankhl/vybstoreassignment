@@ -44,7 +44,7 @@ const Header = () => {
       <div className='nav-button max-md:hidden' onClick={() => setDropOpen(!dropOpen)}>
         <PiUserCircleDuotone style={{ width: '53px', height: '25px' }} />
         <HiOutlineChevronDown style={{ width: '53px', height: '25px' }} />
-        {dropOpen && (<WebDropDown />)}
+        {dropOpen && (<WebDropDown setDropOpen={setDropOpen} dropOpen={dropOpen} />)}
       </div>
 
       <div className='md:hidden cursor-pointer z-50' onClick={() => setMobileDropDown(!mobileDropDown)}>
