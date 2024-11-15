@@ -42,8 +42,8 @@ const MobileDropDown = ({ setMobileDropDown, mobileDropDown }: { setMobileDropDo
                             </div>
 
                             <div className='w-full h-[124px] flex flex-col gap-[16px]'>
-                                <button className='w-full h-[19px] flex items-center gap-[11px]'>
-                                    <Link href='/login'><FaRegUser />Profile</Link>
+                                <button className='w-full h-[19px]'>
+                                    <Link href='/login' className='w-full h-full flex items-center gap-[11px]'><FaRegUser />Profile</Link>
                                 </button>
                                 <button className='w-full h-[19px] flex items-center gap-[11px]'>
                                     <CiLocationOn />Address
