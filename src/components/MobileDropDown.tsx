@@ -9,6 +9,7 @@ import { FaRegUser } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { SlEarphonesAlt } from "react-icons/sl";
 import { CiCircleInfo } from "react-icons/ci";
+import Link from 'next/link';
 
 const MobileDropDown = ({ setMobileDropDown, mobileDropDown }: { setMobileDropDown: any; mobileDropDown: boolean }) => {
 
@@ -42,7 +43,7 @@ const MobileDropDown = ({ setMobileDropDown, mobileDropDown }: { setMobileDropDo
 
                             <div className='w-full h-[124px] flex flex-col gap-[16px]'>
                                 <button className='w-full h-[19px] flex items-center gap-[11px]'>
-                                    <FaRegUser />Profile
+                                    <Link href='/login'><FaRegUser />Profile</Link>
                                 </button>
                                 <button className='w-full h-[19px] flex items-center gap-[11px]'>
                                     <CiLocationOn />Address

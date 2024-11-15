@@ -7,15 +7,19 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import MobileDropDown from './MobileDropDown';
 import WebDropDown from './WebDropDown';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
+
+  const router = useRouter()
+
   const [dropOpen, setDropOpen] = useState<boolean>(false);
   const [mobileDropDown, setMobileDropDown] = useState<boolean>(false)
 
   return (
     <header className='w-full h-[63px] flex-center'>
       <div className='flex-center gap-[22px]'>
-        <div className="flex h-full items-center -space-x-[2px] text-white">
+        <div className="flex h-full items-center -space-x-[2px] text-white cursor-pointer" onClick={() => router.push('/')}>
           <span className="text-6xl max-lg:text-[3rem] font-black ">V</span>
           <div className="flex flex-col lg:-space-y-2 max-lg:gap-[1px] items-center font-semibold">
             <span className="text-[39px] max-lg:text-[32px] -top-[2px] max-lg:top-[0.3px] relative">YB</span>
