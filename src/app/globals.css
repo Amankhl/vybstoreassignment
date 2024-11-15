@@ -1,21 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #181818;
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Urbanist", sans-serif;
+  max-width: 100svw;
+}
+.flex-center{
+  @apply flex items-center justify-between
+}
+.body-layout{
+  @apply space-y-[48px] max-lg:space-y-[24px] max-md:py-[8px] max-sm:px-[16px] md:py-[15px] md:px-[29px] xl:py-[36px] xl:px-[120px];
+}
+.h1-web{
+  @apply text-[40px];
+}
+.h2-web{
+  @apply text-[32px];
+}
+.h3-web{
+  @apply text-[27px];
+}
+.h4-web{
+  @apply text-[22px];
+}
+.body1-web{
+  @apply text-[18px] font-medium;
+}
+.body2-web{
+  @apply text-[16px] font-medium;
+}
+.cta-web{
+  @apply text-[18px] font-semibold;
+}
+
+.h1-mobile{
+  @apply text-[24px];
+}
+.h2-mobile{
+  @apply text-[20px];
+}
+.h3-mobile{
+  @apply text-[18px];
+}
+.h4-mobile{
+  @apply text-[16px];
+}
+.body1-mobile{
+  @apply text-[16px] font-medium;
+}
+.body2-mobile{
+  @apply text-[14px] font-medium;
+}
+.cta-mobile{
+  @apply text-[16px] font-semibold;
+}
+
+
+.nav-search{
+  @apply text-[#404040] bg-white flex items-center w-[290px] max-lg:w-[240px] max-md:w-[190px] h-[50px] rounded-[25px] border-[1px];
+}
+.nav-search input{
+  @apply outline-none h-full flex-1 rounded-r-[25px] max-lg:w-[100px] pr-5;
+}
+.nav-links{
+  @apply 2xl:text-[27px] max-md:hidden md:text-[10px] lg:text-[19px] font-[700] text-[#ffff] flex-center gap-[36px] max-xl:gap-[22px];
+}
+.nav-button{
+  @apply bg-white flex justify-between cursor-pointer items-center gap-1 rounded-[16px] py-[8px] px-[16px] w-[100px] h-[41px] max-md:hidden;
+}
+
+@media (max-width: 380px) {
+  .mobile-search{
+    @apply max-md:w-[170px];
+  }
+}
+@media (max-width: 325px) {
+  .mobile-search{
+    @apply max-md:w-[140px];
+  }
+}
+
+@media (max-width: 1200px){
+  .nav-links{
+    @apply text-[1.25rem];
+  }
+}
+
+@media (max-width: 800px){
+  .nav-links{
+    @apply hidden;
+  }
+}
+
+
+/* hero */
+
+.boxes{
+  @apply h-[97px] p-[10px] max-md:p-[8px] rounded-xl max-md:text-[40px] max-md:h-[64px] max-md:leading-[48px];
+}
+
+
+/* Travel */
+
+.bg-mountain{
+  background-image: url('/assets/mountain1.png');
+}
+
+
+
+
+
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
